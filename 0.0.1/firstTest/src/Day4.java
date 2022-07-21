@@ -122,10 +122,8 @@ public class Day4 {
         boolean[] won = new boolean[cards.size()];
         for(int i = 0; i < time.length; i++){time[i] = -1;}
         //Re-set subBingo
-        numIndex = 5;
+        numIndex = 0;
         subBingo.clear();
-        for(int i = 0; i< 5; i++){subBingo.add(bingoNumbers.get(i)); }
-
         //Find longest bingo card to go BINGO
         while(subBingo.size() < bingoNumbers.size()){
             for(int i = 0; i < cards.size(); i++){
@@ -188,5 +186,9 @@ public class Day4 {
             System.out.println();
         }
         //End of main
+
+        for(int i : time){
+            System.out.print(i + " ");
+        }
     }
 }
